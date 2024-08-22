@@ -1,6 +1,6 @@
 # advanced_project
 
-A new Flutter project.
+flutter pracrise project
 
 ## Getting Started
 
