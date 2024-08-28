@@ -16,7 +16,7 @@ class EmailAndPassword extends StatefulWidget {
 class _EmailAndPasswordState extends State<EmailAndPassword> {
   bool obScureText = true;
   late TextEditingController passwordController;
-  late TextEditingController emailController;
+
   bool hasLowerCase = false;
   bool hasUpperCase = false;
   bool hasNumber = false;
@@ -27,7 +27,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   void initState() {
     super.initState();
     passwordController = context.read<LoginCubit>().passwordController;
-    emailController = context.read<LoginCubit>().emailController;
+  
     setupPassWordControllerListener();
     
   }
@@ -50,7 +50,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
       key: context.read<LoginCubit>().globalKey,
       child: Column(children: [
         AppTextFormField(
-            controller: emailController,
+            controller: context.read<LoginCubit>().emailController,
             hintText: "Email",
             validator: (email) {
               if (email == null || email.isEmpty || !AppRegx.isValidEmail(email))  {
@@ -59,7 +59,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             }),
         verticalSpacing(18),
         AppTextFormField(
-            controller: passwordController,
+            controller: context.read<LoginCubit>().passwordController,
             validator: (password) {
               if (password == null || password.isEmpty || !AppRegx.isValidPassword(password)) {
                 return "Please enter your password";
@@ -89,7 +89,6 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   @override
   void dispose() {
     passwordController.dispose();
-    emailController.dispose();
     super.dispose();
   }
 }

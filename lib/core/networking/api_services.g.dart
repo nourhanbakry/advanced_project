@@ -14,7 +14,7 @@ class _ApiServices implements ApiServices {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= 'https://vcare.integration25.com/api/';
+    baseUrl ??= 'https://vcare.integration25.com/api';
   }
 
   final Dio _dio;
@@ -37,7 +37,7 @@ class _ApiServices implements ApiServices {
     )
         .compose(
           _dio.options,
-          'auth/login',
+          '/auth/login',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -50,6 +50,40 @@ class _ApiServices implements ApiServices {
     late LoginResponce _value;
     try {
       _value = LoginResponce.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<SignUpResponce> signup(SignUpRequestBody signUpRequestBody) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(signUpRequestBody.toJson());
+    final _options = _setStreamType<SignUpResponce>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          '/auth/register',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late SignUpResponce _value;
+    try {
+      _value = SignUpResponce.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;
