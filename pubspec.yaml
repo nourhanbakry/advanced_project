@@ -77,6 +77,10 @@ flutter:
     - assets/svgs/docdoc_logo.svg
     - assets/svgs/docdoc_logo_low_opacity.svg
     - assets/images/onBoarding_doctor.png
+    - assets/svgs/notifications.svg
+    - assets/images/Background.png
+    - assets/images/girlDoctor.png
+    - assets/svgs/general_doctor.svg
     
     
   # An image asset can refer to one or more resolution-specific "variants", see
