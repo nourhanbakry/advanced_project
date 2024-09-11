@@ -20,3 +20,7 @@ extension Navigation on BuildContext {
     Navigator.pop(this);
   }
 }
+
+extension StringCheckingExtension on String? {
+  bool isNullOrEmpty() => this == null || this == "";
+}
