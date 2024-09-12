@@ -12,7 +12,7 @@ class _HomeApiServices implements HomeApiServices {
   _HomeApiServices(
     this._dio, {
     this.baseUrl,
-    
+ 
   }) {
     baseUrl ??= 'https://vcare.integration25.com/api/';
   }
@@ -21,7 +21,6 @@ class _HomeApiServices implements HomeApiServices {
 
   String? baseUrl;
 
-  
 
   @override
   Future<SpecilizationResponceModel> getSpeclizedData() async {
@@ -48,7 +47,7 @@ class _HomeApiServices implements HomeApiServices {
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
     late SpecilizationResponceModel _value;
       _value = SpecilizationResponceModel.fromjson(_result.data!);
-    
+   
     return _value;
   }
 

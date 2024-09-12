@@ -1,6 +1,6 @@
 
 import 'package:advanced_project/features/home/data/models/specilization_responce_model.dart';
-import 'package:advanced_project/features/home/ui/widgets/doctors_list_view_widget.dart';
+import 'package:advanced_project/features/home/ui/widgets/Doctors_list/doctors_list_view_widget.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

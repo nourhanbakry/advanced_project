@@ -50,7 +50,7 @@ DoctorsList _$DoctorsListFromJson(Map<String, dynamic> json) => DoctorsList(
       email: json['email'] as String?,
       phone: json['phone'] as String?,
       gender: json['gender'] as String?,
-      price: json['appoint_price'] as int?,
+      price: (json['appoint_price'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$DoctorsListToJson(DoctorsList instance) =>
