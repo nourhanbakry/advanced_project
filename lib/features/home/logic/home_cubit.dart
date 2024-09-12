@@ -1,4 +1,5 @@
 import 'package:advanced_project/core/helper/exctensions.dart';
+import 'package:advanced_project/core/networking/api_error_handler.dart';
 import 'package:advanced_project/features/home/data/models/specilization_responce_model.dart';
 import 'package:advanced_project/features/home/data/repos/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,7 +26,7 @@ class HomeCubit extends Cubit<HomeState> {
         emit(HomeState.specilizationSuccess(speclizationsListOfData));
       },
       failure: (message) =>
-          emit(HomeState.specilizationFailure(message.message)),
+          emit(HomeState.specilizationFailure(ErrorHandler.handel(message))),
     );
   }
 

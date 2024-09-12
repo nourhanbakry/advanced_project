@@ -20,7 +20,7 @@ class SpeclizationsBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
             specilizationLoading: () => setupLoading(),
-            specilizationFailure: (error) => Center(child: Text(error)),
+            specilizationFailure: (error) => const Center(child: Text("Error")),
             specilizationSuccess: (speclizationDataList) {
               return setupSuccess(speclizationDataList);
             },

@@ -23,7 +23,7 @@ mixin _$HomeState {
     required TResult Function(
             List<SpecilizationDataList?>? speclizationDataList)
         specilizationSuccess,
-    required TResult Function(String error) specilizationFailure,
+    required TResult Function(ApiErrorModel apiErrorModel) specilizationFailure,
     required TResult Function(List<DoctorsList?>? doctorsList) doctorsSuccess,
     required TResult Function(String error) doctorsFailure,
   }) =>
@@ -34,7 +34,7 @@ mixin _$HomeState {
     TResult? Function()? specilizationLoading,
     TResult? Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult? Function(String error)? specilizationFailure,
+    TResult? Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult? Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult? Function(String error)? doctorsFailure,
   }) =>
@@ -45,7 +45,7 @@ mixin _$HomeState {
     TResult Function()? specilizationLoading,
     TResult Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult Function(String error)? specilizationFailure,
+    TResult Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult Function(String error)? doctorsFailure,
     required TResult orElse(),
@@ -150,7 +150,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(
             List<SpecilizationDataList?>? speclizationDataList)
         specilizationSuccess,
-    required TResult Function(String error) specilizationFailure,
+    required TResult Function(ApiErrorModel apiErrorModel) specilizationFailure,
     required TResult Function(List<DoctorsList?>? doctorsList) doctorsSuccess,
     required TResult Function(String error) doctorsFailure,
   }) {
@@ -164,7 +164,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? specilizationLoading,
     TResult? Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult? Function(String error)? specilizationFailure,
+    TResult? Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult? Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult? Function(String error)? doctorsFailure,
   }) {
@@ -178,7 +178,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? specilizationLoading,
     TResult Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult Function(String error)? specilizationFailure,
+    TResult Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult Function(String error)? doctorsFailure,
     required TResult orElse(),
@@ -284,7 +284,7 @@ class _$SpecilizationLoadingImpl implements SpecilizationLoading {
     required TResult Function(
             List<SpecilizationDataList?>? speclizationDataList)
         specilizationSuccess,
-    required TResult Function(String error) specilizationFailure,
+    required TResult Function(ApiErrorModel apiErrorModel) specilizationFailure,
     required TResult Function(List<DoctorsList?>? doctorsList) doctorsSuccess,
     required TResult Function(String error) doctorsFailure,
   }) {
@@ -298,7 +298,7 @@ class _$SpecilizationLoadingImpl implements SpecilizationLoading {
     TResult? Function()? specilizationLoading,
     TResult? Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult? Function(String error)? specilizationFailure,
+    TResult? Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult? Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult? Function(String error)? doctorsFailure,
   }) {
@@ -312,7 +312,7 @@ class _$SpecilizationLoadingImpl implements SpecilizationLoading {
     TResult Function()? specilizationLoading,
     TResult Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult Function(String error)? specilizationFailure,
+    TResult Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult Function(String error)? doctorsFailure,
     required TResult orElse(),
@@ -458,7 +458,7 @@ class _$SpecilizationSuccessImpl implements SpecilizationSuccess {
     required TResult Function(
             List<SpecilizationDataList?>? speclizationDataList)
         specilizationSuccess,
-    required TResult Function(String error) specilizationFailure,
+    required TResult Function(ApiErrorModel apiErrorModel) specilizationFailure,
     required TResult Function(List<DoctorsList?>? doctorsList) doctorsSuccess,
     required TResult Function(String error) doctorsFailure,
   }) {
@@ -472,7 +472,7 @@ class _$SpecilizationSuccessImpl implements SpecilizationSuccess {
     TResult? Function()? specilizationLoading,
     TResult? Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult? Function(String error)? specilizationFailure,
+    TResult? Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult? Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult? Function(String error)? doctorsFailure,
   }) {
@@ -486,7 +486,7 @@ class _$SpecilizationSuccessImpl implements SpecilizationSuccess {
     TResult Function()? specilizationLoading,
     TResult Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult Function(String error)? specilizationFailure,
+    TResult Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult Function(String error)? doctorsFailure,
     required TResult orElse(),
@@ -561,7 +561,7 @@ abstract class _$$SpecilizationFailureImplCopyWith<$Res> {
           $Res Function(_$SpecilizationFailureImpl) then) =
       __$$SpecilizationFailureImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String error});
+  $Res call({ApiErrorModel apiErrorModel});
 }
 
 /// @nodoc
@@ -577,13 +577,13 @@ class __$$SpecilizationFailureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = null,
+    Object? apiErrorModel = null,
   }) {
     return _then(_$SpecilizationFailureImpl(
-      null == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == apiErrorModel
+          ? _value.apiErrorModel
+          : apiErrorModel // ignore: cast_nullable_to_non_nullable
+              as ApiErrorModel,
     ));
   }
 }
@@ -591,14 +591,14 @@ class __$$SpecilizationFailureImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SpecilizationFailureImpl implements SpecilizationFailure {
-  const _$SpecilizationFailureImpl(this.error);
+  const _$SpecilizationFailureImpl(this.apiErrorModel);
 
   @override
-  final String error;
+  final ApiErrorModel apiErrorModel;
 
   @override
   String toString() {
-    return 'HomeState.specilizationFailure(error: $error)';
+    return 'HomeState.specilizationFailure(apiErrorModel: $apiErrorModel)';
   }
 
   @override
@@ -606,11 +606,12 @@ class _$SpecilizationFailureImpl implements SpecilizationFailure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpecilizationFailureImpl &&
-            (identical(other.error, error) || other.error == error));
+            (identical(other.apiErrorModel, apiErrorModel) ||
+                other.apiErrorModel == apiErrorModel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, error);
+  int get hashCode => Object.hash(runtimeType, apiErrorModel);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -630,11 +631,11 @@ class _$SpecilizationFailureImpl implements SpecilizationFailure {
     required TResult Function(
             List<SpecilizationDataList?>? speclizationDataList)
         specilizationSuccess,
-    required TResult Function(String error) specilizationFailure,
+    required TResult Function(ApiErrorModel apiErrorModel) specilizationFailure,
     required TResult Function(List<DoctorsList?>? doctorsList) doctorsSuccess,
     required TResult Function(String error) doctorsFailure,
   }) {
-    return specilizationFailure(error);
+    return specilizationFailure(apiErrorModel);
   }
 
   @override
@@ -644,11 +645,11 @@ class _$SpecilizationFailureImpl implements SpecilizationFailure {
     TResult? Function()? specilizationLoading,
     TResult? Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult? Function(String error)? specilizationFailure,
+    TResult? Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult? Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult? Function(String error)? doctorsFailure,
   }) {
-    return specilizationFailure?.call(error);
+    return specilizationFailure?.call(apiErrorModel);
   }
 
   @override
@@ -658,13 +659,13 @@ class _$SpecilizationFailureImpl implements SpecilizationFailure {
     TResult Function()? specilizationLoading,
     TResult Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult Function(String error)? specilizationFailure,
+    TResult Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult Function(String error)? doctorsFailure,
     required TResult orElse(),
   }) {
     if (specilizationFailure != null) {
-      return specilizationFailure(error);
+      return specilizationFailure(apiErrorModel);
     }
     return orElse();
   }
@@ -714,10 +715,10 @@ class _$SpecilizationFailureImpl implements SpecilizationFailure {
 }
 
 abstract class SpecilizationFailure implements HomeState {
-  const factory SpecilizationFailure(final String error) =
+  const factory SpecilizationFailure(final ApiErrorModel apiErrorModel) =
       _$SpecilizationFailureImpl;
 
-  String get error;
+  ApiErrorModel get apiErrorModel;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -810,7 +811,7 @@ class _$DoctorsSuccessImpl implements DoctorsSuccess {
     required TResult Function(
             List<SpecilizationDataList?>? speclizationDataList)
         specilizationSuccess,
-    required TResult Function(String error) specilizationFailure,
+    required TResult Function(ApiErrorModel apiErrorModel) specilizationFailure,
     required TResult Function(List<DoctorsList?>? doctorsList) doctorsSuccess,
     required TResult Function(String error) doctorsFailure,
   }) {
@@ -824,7 +825,7 @@ class _$DoctorsSuccessImpl implements DoctorsSuccess {
     TResult? Function()? specilizationLoading,
     TResult? Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult? Function(String error)? specilizationFailure,
+    TResult? Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult? Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult? Function(String error)? doctorsFailure,
   }) {
@@ -838,7 +839,7 @@ class _$DoctorsSuccessImpl implements DoctorsSuccess {
     TResult Function()? specilizationLoading,
     TResult Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult Function(String error)? specilizationFailure,
+    TResult Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult Function(String error)? doctorsFailure,
     required TResult orElse(),
@@ -980,7 +981,7 @@ class _$DoctorsFailureImpl implements DoctorsFailure {
     required TResult Function(
             List<SpecilizationDataList?>? speclizationDataList)
         specilizationSuccess,
-    required TResult Function(String error) specilizationFailure,
+    required TResult Function(ApiErrorModel apiErrorModel) specilizationFailure,
     required TResult Function(List<DoctorsList?>? doctorsList) doctorsSuccess,
     required TResult Function(String error) doctorsFailure,
   }) {
@@ -994,7 +995,7 @@ class _$DoctorsFailureImpl implements DoctorsFailure {
     TResult? Function()? specilizationLoading,
     TResult? Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult? Function(String error)? specilizationFailure,
+    TResult? Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult? Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult? Function(String error)? doctorsFailure,
   }) {
@@ -1008,7 +1009,7 @@ class _$DoctorsFailureImpl implements DoctorsFailure {
     TResult Function()? specilizationLoading,
     TResult Function(List<SpecilizationDataList?>? speclizationDataList)?
         specilizationSuccess,
-    TResult Function(String error)? specilizationFailure,
+    TResult Function(ApiErrorModel apiErrorModel)? specilizationFailure,
     TResult Function(List<DoctorsList?>? doctorsList)? doctorsSuccess,
     TResult Function(String error)? doctorsFailure,
     required TResult orElse(),

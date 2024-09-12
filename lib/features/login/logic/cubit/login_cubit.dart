@@ -24,7 +24,7 @@ class LoginCubit extends Cubit<LoginState> {
         await saveUserToken(loginResponce.userData?.token ?? "");
         emit(LoginState.success(loginResponce));
       },
-      failure: (message) => emit(LoginState.failure(message: message.message)),
+      failure: (message) => emit(LoginState.failure(message: message.message ?? "unknown error")),
     );
   }
 

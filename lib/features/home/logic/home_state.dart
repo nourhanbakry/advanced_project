@@ -1,3 +1,4 @@
+import 'package:advanced_project/core/networking/api_error_model.dart';
 import 'package:advanced_project/features/home/data/models/specilization_responce_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -9,7 +10,7 @@ class HomeState with _$HomeState {
    // sepeclizations
   const factory HomeState.specilizationLoading() = SpecilizationLoading;
   const factory HomeState.specilizationSuccess(List<SpecilizationDataList?>? speclizationDataList) = SpecilizationSuccess;
-  const factory HomeState.specilizationFailure(String error) = SpecilizationFailure;
+  const factory HomeState.specilizationFailure(ApiErrorModel apiErrorModel) = SpecilizationFailure;
 
   // doctor specality
   const factory HomeState.doctorsSuccess(List<DoctorsList?>? doctorsList) = DoctorsSuccess;

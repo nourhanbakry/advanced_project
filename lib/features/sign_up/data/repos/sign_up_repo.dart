@@ -16,7 +16,7 @@ class SignUpRepo {
       return  ApiResult.success(response);
 
     } catch (error){
-      return ApiResult.failure(ErrorHandler.handle(error));
+      return ApiResult.failure(ErrorHandler.handel(error));
     }
   }
 }

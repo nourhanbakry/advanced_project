@@ -29,7 +29,7 @@ class SignUpCubit extends Cubit<SignUpState> {
         gender: 0));
     response.when(
       success: (signUpResponce) => emit(SignUpState.signUpSuccess(signUpResponce)),
-      failure: (message) => emit(SignUpState.signUpFailure(message: message.message)),
+      failure: (message) => emit(SignUpState.signUpFailure(message: message.message ?? "unknown error")),
     );
   }
 }
